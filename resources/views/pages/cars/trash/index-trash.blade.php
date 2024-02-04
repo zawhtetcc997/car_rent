@@ -1,11 +1,11 @@
 @extends('layouts.sb-admin-2.master')
 
-@section('title', 'Mingalar Car Terhapus')
+@section('title', 'Mingalar Car Delete')
 
 @section('content')
 <div class="row mb-3">
     <div class="col-md-6 text-left">
-        <h1>Car List Terhapus</h1>
+        <h1>Car List Delete</h1>
     </div>
     <div class="col-md-5 text-right">
         <a href="{{ route('cars.index') }}" class="btn btn-dark">Kembali</a>

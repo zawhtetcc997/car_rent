@@ -72,7 +72,7 @@
             <tr>
                 <td colspan="6">
                     <p class="font-weight-bold text-center text-monospace">
-                        Data customer {{ $type === 'trash' ? ' terhapus ' : '' }} tidak tersedia
+                        Data customer {{ $type === 'trash' ? ' Delete ' : '' }} tidak Available
                     </p>
                 </td>
             </tr>

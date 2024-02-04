@@ -1,9 +1,9 @@
 @extends('layouts.sb-admin-2.master')
 
-@section('title', 'Mingalar Tambah Car')
+@section('title', 'Mingalar Add Car')
 
 @section('content')
-<h1>Tambah Car</h1>
+<h1>Add Car</h1>
 
 <x-car.car-form :route="route('cars.store')" :car="null" type="create" />
 @endsection

@@ -19,7 +19,7 @@
             <div class="table-responsive">
                 <table class="table">
                     <tr>
-                        <th scope="row" class="text-left">Nama Customer</th>
+                        <th scope="row" class="text-left">Name Customer</th>
                         <td class="pl-5">{{ $transaction->customer->name }}</td>
                     </tr>
                     <tr>

@@ -1,6 +1,6 @@
 @extends('layouts.sb-admin-2.master')
 
-@section('title', 'Halaman Edit Profile')
+@section('title', 'Mingalar Edit Profile')
 
 @section('content')
 <h1>Edit Profile</h1>
@@ -23,7 +23,7 @@
                     @method('patch')
 
                     <div class="form-group">
-                        <label for="name">Nama</label>
+                        <label for="name">Name</label>
                         <input class="form-control @error('name') is-invalid @enderror" type="text" name="name"
                             id="name" value="{{ old('name', $user->name) }}" {{ auth()->user()->name === 'Administrator'
                         ? ' readonly' : '' }}>

@@ -84,7 +84,7 @@
             <tr>
                 <td colspan="8">
                     <p class="font-weight-bold text-center text-monospace">
-                        Data Transactions {{ $type === 'trash' ? ' terhapus ' : '' }} empty
+                        Data Transactions {{ $type === 'trash' ? ' Delete ' : '' }} empty
                     </p>
                 </td>
             </tr>

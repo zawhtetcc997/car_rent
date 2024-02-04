@@ -1,16 +1,16 @@
 @extends('layouts.sb-admin-2.master')
 
-@section('title', 'Mingalar Tambah Admin')
+@section('title', 'Mingalar Add Admin')
 
 @section('content')
-<h1>Tambah Admin</h1>
+<h1>Add Admin</h1>
 
 <div class="row justify-content-center mb-5">
     <div class="col-md-8">
         <div class="card mt-3">
             <div class="row">
                 <div class="col-10">
-                    <h5 class="card-header">Form Tambah Admin</h5>
+                    <h5 class="card-header">Form Add Admin</h5>
                 </div>
                 <div class="col-2">
                     <a href="{{ route('admins.index') }}"
@@ -22,7 +22,7 @@
                     @csrf
 
                     <div class="form-group">
-                        <label for="name">Nama</label>
+                        <label for="name">Name</label>
                         <input class="form-control @error('name') is-invalid @enderror" type="text" name="name"
                             id="name" value="{{ old('name') }}">
                         @error('name')
@@ -71,7 +71,7 @@
                         @enderror
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-block mt-4" id="btnfr">Tambah</button>
+                    <button type="submit" class="btn btn-primary btn-block mt-4" id="btnfr">Add</button>
                 </form>
             </div>
         </div>

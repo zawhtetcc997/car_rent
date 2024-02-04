@@ -3,7 +3,7 @@
         <div class="card mt-3">
             <div class="row">
                 <div class="col-10">
-                    <h5 class="card-header">Form {{ $type === 'create' ? ' Tambah' : ' Ubah' }} Customer</h5>
+                    <h5 class="card-header">Form {{ $type === 'create' ? ' Add' : ' Ubah' }} Customer</h5>
                 </div>
                 <div class="col-2">
                     <a href="{{ route('customers.index') }}"
@@ -19,7 +19,7 @@
                     @endif
 
                     <div class="form-group">
-                        <label for="name">Nama</label>
+                        <label for="name">Name</label>
                         <input class="form-control @error('name') is-invalid @enderror" type="text" name="name"
                             id="name" value="{{ $type === 'create' ? old('name') : old('name', $customer->name) }}">
                         @error('name')
@@ -89,7 +89,7 @@
                     @endif
 
                     <button type="submit" class="btn btn-primary btn-block mt-4" id="btnfr">
-                        {{ $type === 'create' ? 'Tambah' : 'Ubah' }}
+                        {{ $type === 'create' ? 'Add' : 'Ubah' }}
                     </button>
                 </form>
             </div>

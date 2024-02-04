@@ -3,7 +3,7 @@
         <div class="card mt-3">
             <div class="row">
                 <div class="col-10">
-                    <h5 class="card-header">Form {{ $type === 'create' ? ' Tambah' : ' Ubah' }} Care</h5>
+                    <h5 class="card-header">Form {{ $type === 'create' ? ' Add' : ' Ubah' }} Care</h5>
                 </div>
                 <div class="col-2">
                     <a href="{{ route('cars.index', ['status' => 'AVAILABLE']) }}"
@@ -19,7 +19,7 @@
                     @endif
 
                     <div class="form-group">
-                        <label for="name">Nama</label>
+                        <label for="name">Name</label>
                         <input class="form-control @error('name') is-invalid @enderror" type="text" name="name"
                             id="name" value="{{ $type === 'create' ? old('name') : old('name', $car->name) }}">
                         @error('name')
@@ -35,7 +35,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="years">Tahun</label>
+                        <label for="years">Year</label>
                         <input class="form-control @error('years') is-invalid @enderror" type="number" name="years"
                             id="years" value="{{ $type === 'create' ? old('years') : old('years', $car->years) }}">
                         @error('years')
@@ -43,7 +43,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="plat_number">Plat Nomor</label>
+                        <label for="plat_number">Plate Number</label>
                         <input class="form-control @error('plat_number') is-invalid @enderror" type="text"
                             name="plat_number" id="plat_number"
                             value="{{ $type === 'create' ? old('plat_number') : old('plat_number', $car->plat_number) }}">
@@ -52,7 +52,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="color">Warna</label>
+                        <label for="color">Color</label>
                         <input class="form-control @error('color') is-invalid @enderror" type="text" name="color"
                             id="color" value="{{ $type === 'create' ? old('color') : old('color', $car->color) }}">
                         @error('color')
@@ -60,7 +60,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="price">Harga</label>
+                        <label for="price">Price</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
@@ -107,7 +107,7 @@
                     @endif
 
                     <button type="submit" class="btn btn-primary btn-block mt-4" id="btnfr">
-                        {{ $type === 'create' ? 'Tambah' : 'Ubah' }}
+                        {{ $type === 'create' ? 'Add' : 'Ubah' }}
                     </button>
                 </form>
             </div>

@@ -3,11 +3,11 @@
         <thead class="thead-dark">
             <tr>
                 <th scope="col">No.</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Tahun</th>
-                <th scope="col">Plat Nomor</th>
-                <th scope="col">Warna</th>
-                <th scope="col">Harga</th>
+                <th scope="col">Name</th>
+                <th scope="col">Year</th>
+                <th scope="col">Plate Number</th>
+                <th scope="col">Color</th>
+                <th scope="col">Price</th>
                 <th scope="col">Status</th>
                 <th scope="col">Action</th>
             </tr>
@@ -23,7 +23,7 @@
                 <td class="price">{{ $car->price }}</td>
                 <td
                     class="font-weight-bold font-italic{{ $car->status == 'AVAILABLE' ? ' text-primary' : ' text-success' }}">
-                    {{ $car->status === 'AVAILABLE' ? 'Tersedia' : 'Disewa' }}
+                    {{ $car->status === 'AVAILABLE' ? 'Available' : 'Rented' }}
                 </td>
                 <td>
                     @if ($type === 'index')
@@ -77,7 +77,7 @@
             <tr>
                 <td colspan="8">
                     <p class="font-weight-bold text-center text-monospace">
-                        Data Car {{ $type === 'trash' ? ' terhapus ' : '' }} empty
+                        Data Car {{ $type === 'trash' ? ' Delete ' : '' }} empty
                     </p>
                 </td>
             </tr>

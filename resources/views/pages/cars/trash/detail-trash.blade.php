@@ -5,7 +5,7 @@
 @section('content')
 <div class="row">
     <div class="col-md-6 text-left">
-        <h1>Detail Car Terhapus</h1>
+        <h1>Detail Car Delete</h1>
 
     </div>
     <div class="col-md-6 text-right">
