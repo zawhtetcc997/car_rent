@@ -15,7 +15,7 @@
                         <form action="{{ route('admins.index') }}">
                             <div class="input-group mb-3">
                                 <input type="text" name="search" class="form-control"
-                                    placeholder="Cari berdasarkan nama atau email" value="{{ request()->search }}">
+                                    placeholder="Search by name atau email" value="{{ request()->search }}">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary" type="submit"
                                         id="button-addon2">Cari</button>
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <a href="{{ route('admins.create') }}" class="btn btn-primary btn-block mb-1">Tambah Admin</a>
+        <a href="{{ route('admins.create') }}" class="btn btn-primary btn-block mb-1">Create Admin</a>
 
         <div class="table-responsive">
             <table class="table table-hover table-bordered text-center mt-2">
@@ -90,7 +90,7 @@
                     @empty
                     <tr>
                         <td colspan="6">
-                            <p class="font-weight-bold text-center text-monospace">Data admin tidak tersedia</p>
+                            <p class="font-weight-bold text-center text-monospace">Admin data not available</p>
                         </td>
                     </tr>
                     @endforelse

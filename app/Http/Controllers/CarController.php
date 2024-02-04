@@ -136,11 +136,11 @@ class CarController extends Controller
      */
     public function destroy(Car $car)
     {
-        $failedMessage = "Data Car gagal dihapus";
+        $failedMessage = "Failed to delete Selected Car";
 
         return $this->checkProcess(
             self::ROUTE_INDEX,
-            'Data Car berhasil dihapus',
+            'Car data has been deleted successfully',
             function () use ($car, $failedMessage) {
                 if (!$car->update(['deleted_by' => auth()->id()])) throw new \Exception($failedMessage);
                 if (!$car->delete()) throw new \Exception($failedMessage);

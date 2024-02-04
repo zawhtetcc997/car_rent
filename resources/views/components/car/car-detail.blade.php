@@ -9,17 +9,17 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <p class="card-text">Nama : {{ $car->name }}</p>
-                                <p class="card-text">Merk : {{ $car->merk }}</p>
-                                <p class="card-text">Tahun : {{ $car->years }}</p>
+                                <p class="card-text">Name : {{ $car->name }}</p>
+                                <p class="card-text">Brand : {{ $car->merk }}</p>
+                                <p class="card-text">Year : {{ $car->years }}</p>
                                 <p class="card-text">
-                                    Plat Nomor : <span class="font-weight-bold">{{ $car->plat_number }}</span>
+                                    Plate Number : <span class="font-weight-bold">{{ $car->plat_number }}</span>
                                 </p>
                             </div>
                             <div class="col-md-6">
-                                <p class="card-text">Warna : {{ $car->years }}</p>
+                                <p class="card-text">Color : {{ $car->years }}</p>
                                 <p class="card-text">
-                                    Harga : <span class="font-weight-bold price">{{ currencyFormat($car->price)
+                                    Price : <span class="font-weight-bold price">{{ currencyFormat($car->price)
                                         }}</span>
                                 </p>
                                 <p class="card-text">

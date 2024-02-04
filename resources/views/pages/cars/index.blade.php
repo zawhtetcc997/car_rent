@@ -9,10 +9,10 @@
     <div class="col-md-12">
         <x-car.car-search-bar :route="route('cars.index')" type="index" />
 
-        <a href="{{ route('cars.create') }}" class="btn btn-primary btn-block my-4">Tambah Car</a>
+        <a href="{{ route('cars.create') }}" class="btn btn-primary btn-block my-4">Create Car</a>
 
         @if (auth()->user()->name === 'Administrator')
-        <a href="{{ route('cars.trash') }}" class="btn btn-warning btn-block my-4">Data Car Terhapus</a>
+        <a href="{{ route('cars.trash') }}" class="btn btn-warning btn-block my-4">Customer Data Deleted</a>
         @endif
 
         <x-car.car-list :cars="$cars" type="index" />

@@ -9,7 +9,7 @@
 
     </div>
     <div class="col-md-6 text-right">
-        <a href="{{ route('cars.index') }}" class="btn btn-dark">Kembali</a>
+        <a href="{{ route('cars.index') }}" class="btn btn-dark">Go Back</a>
     </div>
 </div>
 

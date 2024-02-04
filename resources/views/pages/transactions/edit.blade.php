@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-2">
                     <a href="{{ route('transactions.index') }}"
-                        class="btn btn-outline-primary btn-sm float-right my-2 mr-3">Kembali</a>
+                        class="btn btn-outline-primary btn-sm float-right my-2 mr-3">Go Back</a>
                 </div>
             </div>
             <div class="card-body">
@@ -89,7 +89,7 @@
                         <label for="penalty_amount">Total Denda</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
+                                <span class="input-group-text" id="inputGroup-sizing-default">$</span>
                             </div>
                             <input type="text" class="form-control price" name="penalty_amount" id="penalty_amount"
                                 aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
@@ -98,11 +98,11 @@
                     </div>
                     <div class="form-group">
                         <label for="total_price">
-                            Total Harga {{ $transaction->total_late ? ' ( + Total Denda )' : ''}}
+                            Total Price {{ $transaction->total_late ? ' ( + Total Denda )' : ''}}
                         </label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
+                                <span class="input-group-text" id="inputGroup-sizing-default">$</span>
                             </div>
                             <input type="text" class="form-control price" name="total_price" id="total_price"
                                 aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
@@ -113,7 +113,7 @@
                         <label for="dp_amount">Jumlah DP</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
+                                <span class="input-group-text" id="inputGroup-sizing-default">$</span>
                             </div>
                             <input type="text" class="form-control price" name="dp_amount" id="dp_amount"
                                 aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
@@ -124,7 +124,7 @@
                         <label for="remaining_payment">Sisa Pembayaran</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
+                                <span class="input-group-text" id="inputGroup-sizing-default">$</span>
                             </div>
                             <input type="text" class="form-control price" name="remaining_payment"
                                 id="remaining_payment" aria-label="Sizing example input"
@@ -136,7 +136,7 @@
                         <label for="payment_amount">Jumlah Pelunasan</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
+                                <span class="input-group-text" id="inputGroup-sizing-default">$</span>
                             </div>
                             <input type="text" class="form-control @error('payment_amount') is-invalid @enderror price"
                                 name="payment_amount" id="payment_amount" aria-label="Sizing example input"
@@ -147,10 +147,10 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="return_amount">Jumlah Kembalian</label>
+                        <label for="return_amount">Jumlah Go Backan</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
+                                <span class="input-group-text" id="inputGroup-sizing-default">$</span>
                             </div>
                             <input type="text" class="form-control @error('return_amount') is-invalid @enderror price"
                                 name="return_amount" id="return_amount" aria-label="Sizing example input"

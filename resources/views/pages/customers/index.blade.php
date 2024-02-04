@@ -11,10 +11,10 @@
 
         <x-customer.customer-search-bar :route="route('customers.index')" />
 
-        <a href="{{ route('customers.create') }}" class="btn btn-primary btn-block mb-4 mt-2">Tambah Customer</a>
+        <a href="{{ route('customers.create') }}" class="btn btn-primary btn-block mb-4 mt-2">Create Customer</a>
 
         @if (auth()->user()->name === 'Administrator')
-        <a href="{{ route('customers.trash') }}" class="btn btn-warning btn-block my-4">Data Customer Terhapus</a>
+        <a href="{{ route('customers.trash') }}" class="btn btn-warning btn-block my-4">Deleted Customer Data</a>
         @endif
 
         <x-customer.customer-list :customers="$customers" type="index" />

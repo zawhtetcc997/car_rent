@@ -108,9 +108,9 @@
     <script src="{{ asset('/sb-admin-2/js/sb-admin-2.min.js') }}"></script>
     <script>
         @if (session('success'))
-            swal("Sukses!", "{{ session('success') }}", "success");
+            swal("Success!", "{{ session('success') }}", "success");
         @elseif (session('failed'))
-            swal("Gagal!", "{{ session('failed') }}", "error");
+            swal("Fail!", "{{ session('failed') }}", "error");
         @endif
 
         document.addEventListener('click', function(e) {

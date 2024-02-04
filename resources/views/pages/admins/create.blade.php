@@ -1,20 +1,20 @@
 @extends('layouts.sb-admin-2.master')
 
-@section('title', 'Mingalar Tambah Admin')
+@section('title', 'Add Admin')
 
 @section('content')
-<h1>Tambah Admin</h1>
+<h1>Create Admin</h1>
 
 <div class="row justify-content-center mb-5">
     <div class="col-md-8">
         <div class="card mt-3">
             <div class="row">
                 <div class="col-10">
-                    <h5 class="card-header">Form Tambah Admin</h5>
+                    <h5 class="card-header">Form Create Admin</h5>
                 </div>
                 <div class="col-2">
                     <a href="{{ route('admins.index') }}"
-                        class="btn btn-outline-primary btn-sm float-right my-2 mr-3">Kembali</a>
+                        class="btn btn-outline-primary btn-sm float-right my-2 mr-3">Go Back</a>
                 </div>
             </div>
             <div class="card-body">
@@ -71,7 +71,7 @@
                         @enderror
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-block mt-4" id="btnfr">Tambah</button>
+                    <button type="submit" class="btn btn-primary btn-block mt-4" id="btnfr">Create</button>
                 </form>
             </div>
         </div>

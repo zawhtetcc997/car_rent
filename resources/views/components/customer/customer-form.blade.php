@@ -3,11 +3,11 @@
         <div class="card mt-3">
             <div class="row">
                 <div class="col-10">
-                    <h5 class="card-header">Form {{ $type === 'create' ? ' Tambah' : ' Ubah' }} Customer</h5>
+                    <h5 class="card-header">Form {{ $type === 'create' ? ' Create' : ' Change' }} Customer</h5>
                 </div>
                 <div class="col-2">
                     <a href="{{ route('customers.index') }}"
-                        class="btn btn-outline-primary btn-sm float-right my-2 mr-3">Kembali</a>
+                        class="btn btn-outline-primary btn-sm float-right my-2 mr-3">Go Back</a>
                 </div>
             </div>
             <div class="card-body">
@@ -89,7 +89,7 @@
                     @endif
 
                     <button type="submit" class="btn btn-primary btn-block mt-4" id="btnfr">
-                        {{ $type === 'create' ? 'Tambah' : 'Ubah' }}
+                        {{ $type === 'create' ? 'Create' : 'Change' }}
                     </button>
                 </form>
             </div>

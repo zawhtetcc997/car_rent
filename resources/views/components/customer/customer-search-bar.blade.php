@@ -4,7 +4,7 @@
             <div class="col-sm-8">
                 <form action="{{ $route }}">
                     <div class="input-group mb-3">
-                        <input type="text" name="search" class="form-control" placeholder="Cari berdasarkan nama"
+                        <input type="text" name="search" class="form-control" placeholder="Search by name"
                             value="{{ request()->search }}">
                         <div class="input-group-append">
                             <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Cari</button>

@@ -30,7 +30,7 @@
                     @endif
                     <a href="#" class="btn btn-danger btn-sm" data-toggle="modal"
                         data-target="#deletecustomer{{ $customer->phone }}modal">
-                        {{ $type === 'index' ? 'Hapus' : 'Hapus Permanen' }}
+                        {{ $type === 'index' ? 'Delete' : 'Permanent Delete' }}
                     </a>
                 </td>
 
@@ -49,7 +49,7 @@
                             </div>
                             <div class="modal-body">
                                 <p>
-                                    Apakah anda yakin ingin menghapus customer {{ $type === 'trash' ? ' secara permanen'
+                                    Are you sure you want to delete the customer {{ $type === 'trash' ? ' secara permanen'
                                     : '' }}
                                     <strong>{{ $customer->name }}</strong> ?
                                 </p>
@@ -72,7 +72,7 @@
             <tr>
                 <td colspan="6">
                     <p class="font-weight-bold text-center text-monospace">
-                        Data customer {{ $type === 'trash' ? ' terhapus ' : '' }} tidak tersedia
+                        Customer data {{ $type === 'trash' ? ' terhapus ' : '' }} not available
                     </p>
                 </td>
             </tr>
