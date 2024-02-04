@@ -14,7 +14,7 @@
                 </div>
                 <div class="col-2">
                     <a href="{{ route('transactions.index') }}"
-                        class="btn btn-outline-primary btn-sm float-right my-2 mr-3">Kembali</a>
+                        class="btn btn-outline-primary btn-sm float-right my-2 mr-3">Return</a>
                 </div>
             </div>
             <div class="card-body">
@@ -99,7 +99,7 @@
                         <label for="total_price">Total Price</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
+                                <span class="input-group-text" id="inputGroup-sizing-default">$</span>
                             </div>
                             <input type="text" class="form-control @error('total_price') is-invalid @enderror price"
                                 name="total_price" id="total_price" aria-label="Sizing example input"
@@ -113,7 +113,7 @@
                         <label for="payment_amount">Payment Amount</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
+                                <span class="input-group-text" id="inputGroup-sizing-default">$</span>
                             </div>
                             <input type="text" class="form-control @error('payment_amount') is-invalid @enderror price"
                                 name="payment_amount" id="payment_amount" aria-label="Sizing example input"

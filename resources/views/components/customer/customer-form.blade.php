@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-2">
                     <a href="{{ route('customers.index') }}"
-                        class="btn btn-outline-primary btn-sm float-right my-2 mr-3">Kembali</a>
+                        class="btn btn-outline-primary btn-sm float-right my-2 mr-3">Return</a>
                 </div>
             </div>
             <div class="card-body">

@@ -7,7 +7,7 @@
                 </div>
                 <div class="col-2">
                     <a href="{{ route('cars.index', ['status' => 'AVAILABLE']) }}"
-                        class="btn btn-outline-primary btn-sm float-right my-2 mr-3">Kembali</a>
+                        class="btn btn-outline-primary btn-sm float-right my-2 mr-3">Return</a>
                 </div>
             </div>
             <div class="card-body">
@@ -27,10 +27,10 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="merk">Merk</label>
-                        <input class="form-control @error('merk') is-invalid @enderror" type="text" name="merk"
-                            id="merk" value="{{ $type === 'create' ? old('merk') : old('merk', $car->merk) }}">
-                        @error('merk')
+                        <label for="Brand">Brand</label>
+                        <input class="form-control @error('Brand') is-invalid @enderror" type="text" name="Brand"
+                            id="Brand" value="{{ $type === 'create' ? old('Brand') : old('Brand', $car->Brand) }}">
+                        @error('Brand')
                         <small class="fw-bold invalid-feedback">{{ $message }}</small>
                         @enderror
                     </div>
@@ -63,7 +63,7 @@
                         <label for="price">Price</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
+                                <span class="input-group-text" id="inputGroup-sizing-default">$</span>
                             </div>
                             <input type="text" class="form-control @error('price') is-invalid @enderror price"
                                 name="price" aria-label="Sizing example input"
@@ -76,7 +76,7 @@
                     </div>
                     @if ($type === 'create')
                     <div class="form-group">
-                        <label for="image">Poto Care</label>
+                        <label for="image">Car Photo</label>
                         <small class="ml-2">(*opsional)</small>
                         <input id="image" name="image" type="file"
                             class="form-control @error('image') is-invalid @enderror" value="{{ old('image') }}">
@@ -88,12 +88,12 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col-sm-5 my-auto mx-auto text-center">
-                                <label class="float-left">Poto Care saat ini</label>
+                                <label class="float-left">Car Photo saat ini</label>
                                 <img src="{{ $car->getImage() }}" class="rounded-circle img-thumbnail img-fluid"
                                     alt="car image" width="225" height="225">
                             </div>
                             <div class="col-sm-7 my-auto mx-auto">
-                                <label for="image">Ubah Poto Care</label>
+                                <label for="image">Ubah Car Photo</label>
                                 <small class="ml-2">(*opsional)</small>
                                 <input id="image" name="image" type="file"
                                     class="form-control @error('image') is-invalid @enderror"

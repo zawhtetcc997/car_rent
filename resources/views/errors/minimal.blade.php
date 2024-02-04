@@ -65,10 +65,10 @@
         <br>
         <div class="ml-4 align-bottom">
             @auth
-            <a href="{{ route('dashboard') }}">Kembali</a>
+            <a href="{{ route('dashboard') }}">Return</a>
             @endauth
             @guest
-            <a href="{{ route('login') }}">Kembali</a>
+            <a href="{{ route('login') }}">Return</a>
             @endguest
         </div>
     </div>

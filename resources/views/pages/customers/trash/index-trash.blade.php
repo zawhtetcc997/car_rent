@@ -8,7 +8,7 @@
         <h1>Data Customer Delete</h1>
     </div>
     <div class="col-md-5 text-right">
-        <a href="{{ route('customers.index') }}" class="btn btn-dark">Kembali</a>
+        <a href="{{ route('customers.index') }}" class="btn btn-dark">Return</a>
     </div>
 </div>
 

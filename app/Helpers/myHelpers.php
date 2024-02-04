@@ -52,7 +52,7 @@ function integerFormat(string $value)
  */
 function currencyFormat(int $value)
 {
-    return "Rp. " .  number_format($value, 0, '.', '.');
+    return "$ " .  number_format($value, 0, '.', '.');
 }
 
 /**

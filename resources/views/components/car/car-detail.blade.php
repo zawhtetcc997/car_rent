@@ -10,7 +10,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <p class="card-text">Name : {{ $car->name }}</p>
-                                <p class="card-text">Merk : {{ $car->merk }}</p>
+                                <p class="card-text">Brand : {{ $car->Brand }}</p>
                                 <p class="card-text">Year : {{ $car->years }}</p>
                                 <p class="card-text">
                                     Plate Number : <span class="font-weight-bold">{{ $car->plat_number }}</span>

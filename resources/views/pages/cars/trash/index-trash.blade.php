@@ -8,7 +8,7 @@
         <h1>Car List Delete</h1>
     </div>
     <div class="col-md-5 text-right">
-        <a href="{{ route('cars.index') }}" class="btn btn-dark">Kembali</a>
+        <a href="{{ route('cars.index') }}" class="btn btn-dark">Return</a>
     </div>
 </div>
 

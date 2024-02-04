@@ -184,11 +184,11 @@ class CarController extends Controller
     public function restore(string $platNumber)
     {
         $car = $this->getOneDeletedCars($platNumber);
-        $failedMessage = 'Data Car gagal dikembalikan';
+        $failedMessage = 'Data Car gagal diReturnkan';
 
         return $this->checkProcess(
             self::ROUTE_TRASH,
-            'Data Car berhasil dikembalikan',
+            'Data Car berhasil diReturnkan',
             function () use ($car, $failedMessage) {
                 if (!$car->update(['deleted_by' => null])) throw new \Exception($failedMessage);
                 if (!$car->restore()) throw new \Exception($failedMessage);

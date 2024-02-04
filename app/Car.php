@@ -38,18 +38,18 @@ class Car extends Model
     }
 
     /**
-     * set the car's merk
+     * set the car's Brand
      *
      * @param  string $value
      * @return void
      */
-    public function setMerkAttribute($value)
+    public function setBrandAttribute($value)
     {
-        $this->attributes['merk'] = Str::title($value);
+        $this->attributes['Brand'] = Str::title($value);
     }
 
     /**
-     * set the car's plat number
+     * set the car's plate number
      *
      * @param  string $value
      * @return void

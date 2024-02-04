@@ -57,7 +57,7 @@
     <li class="nav-item{{ request()->is('transactions*') ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('transactions.index') }}">
             <i class="fas fa-cash-register"></i>
-            <span>Menu Transaksi</span></a>
+            <span>Menu Transaction</span></a>
     </li>
 
     <!-- Divider -->

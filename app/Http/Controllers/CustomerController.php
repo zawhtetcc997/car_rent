@@ -180,11 +180,11 @@ class CustomerController extends Controller
     public function restore(string $phone)
     {
         $customer = $this->getOneDeletedCustomer($phone);
-        $failedMessage = 'Data customer gagal dikembalikan';
+        $failedMessage = 'Data customer gagal diReturnkan';
 
         return $this->checkProcess(
             self::ROUTE_TRASH,
-            'Data customer berhasil dikembalikan',
+            'Data customer berhasil diReturnkan',
             function () use ($customer, $failedMessage) {
                 if (!$customer->update(['deleted_by' => null])) throw new \Exception($failedMessage);
                 if (!$customer->restore()) throw new \Exception($failedMessage);

@@ -94,7 +94,7 @@
                     </tr>
                     @if ($transaction->updated_by && $transaction->payment_amount - $transaction->total_price > 0)
                     <tr>
-                        <th scope="row" class="text-left">Jumlah Kembalian</th>
+                        <th scope="row" class="text-left">Jumlah Returnan</th>
                         <td class="pl-5">
                             {{ currencyFormat($transaction->payment_amount - $transaction->total_price) }}
                         </td>
