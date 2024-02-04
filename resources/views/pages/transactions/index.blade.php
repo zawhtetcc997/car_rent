@@ -3,7 +3,7 @@
 @section('title', 'Transactions')
 
 @section('content')
-<h1 class="mb-3">Daftar Transaksi</h1>
+<h1 class="mb-3">Transactions</h1>
 
 <div class="row justify-content-center">
     <div class="col-md-12">
