@@ -98,7 +98,7 @@
                     </div>
                     <div class="form-group">
                         <label for="total_price">
-                            Total Harga {{ $transaction->total_late ? ' ( + Total Denda )' : ''}}
+                            Total Price {{ $transaction->total_late ? ' ( + Total Denda )' : ''}}
                         </label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">

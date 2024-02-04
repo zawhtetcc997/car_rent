@@ -53,7 +53,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row" class="text-left">Total Harga</th>
+                        <th scope="row" class="text-left">Total Price</th>
                         <td class="pl-5">
                             {{ currencyFormat($transaction->total_price - $transaction->penalty_amount) }}
                         </td>
@@ -68,7 +68,7 @@
                         <td class="pl-5">{{ currencyFormat($transaction->penalty_amount) }}</td>
                     </tr>
                     <tr>
-                        <th scope="row" class="text-left">Total Harga + Total Denda</th>
+                        <th scope="row" class="text-left">Total Price + Total Denda</th>
                         <td class="pl-5">{{ currencyFormat($transaction->total_price) }}</td>
                     </tr>
                     @endif

@@ -50,7 +50,7 @@
                             <input type="text" name="start_date"
                                 class="form-control @error('start_date') is-invalid @enderror" id="start_date"
                                 value="{{ old('start_date') }}"
-                                placeholder="{{ old('start_date') ?: 'Pilih Rental Date' }}" data-input>
+                                placeholder="{{ old('start_date') ?: 'Select Rental Date' }}" data-input>
                             <div class="input-group-append" id="button-addon4">
                                 <button class="btn btn-outline-secondary" type="button">
                                     <a class="input-button" title="toggle" data-toggle>
@@ -96,7 +96,7 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="total_price">Total Harga</label>
+                        <label for="total_price">Total Price</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="payment_amount">Jumlah Pembayaran</label>
+                        <label for="payment_amount">Payment Amount</label>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="inputGroup-sizing-default">Rp.</span>

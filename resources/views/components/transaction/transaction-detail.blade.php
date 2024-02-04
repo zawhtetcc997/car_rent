@@ -38,12 +38,12 @@
                     </p>
                     @endif
                     <p class="card-text">
-                        Total Harga {{ $transaction->total_late && $transaction->updated_by ? '( + Total Denda)' : '' }}
+                        Total Price {{ $transaction->total_late && $transaction->updated_by ? '( + Total Denda)' : '' }}
                         :
                         <span class="font-weight-bold price">{{ currencyFormat($transaction->total_price)}}</span>
                     </p>
                     <p class="card-text">
-                        Jumlah Pembayaran : <span class="font-weight-bold price">
+                        Payment Amount : <span class="font-weight-bold price">
                             {{ currencyFormat($transaction->payment_amount) }}</span>
                     </p>
                     <p class="card-text">

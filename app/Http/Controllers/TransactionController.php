@@ -357,7 +357,7 @@ class TransactionController extends Controller
     }
 
     /**
-     * update the transaction's total price
+     * update the transaction's Total Price
      *
      * @param  object $transaction
      * @return mixed
