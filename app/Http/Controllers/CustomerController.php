@@ -69,11 +69,11 @@ class CustomerController extends Controller
 
         return $this->checkProcess(
             self::ROUTE_INDEX,
-            'Data customer berhasil dibuat',
+            'Data customer created successfully',
             function () use ($data) {
                 if (!Customer::create($data)) {
                     $this->deleteImage($data['avatar']);
-                    throw new \Exception('Data customer gagal dibuat');
+                    throw new \Exception('Data customer failed to create');
                 }
             }
         );
@@ -117,7 +117,7 @@ class CustomerController extends Controller
 
         return $this->checkProcess(
             self::ROUTE_INDEX,
-            'Data customer berhasil diubah',
+            'Data customer changed successfully',
             function () use ($customer, $data) {
                 if (!$customer->update($data)) throw new \Exception('Data customer gagal diubah');
             }

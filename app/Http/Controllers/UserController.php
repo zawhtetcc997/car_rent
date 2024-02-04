@@ -72,11 +72,11 @@ class UserController extends Controller
 
         return $this->checkProcess(
             self::ROUTE_NAME,
-            'Data admin berhasil dibuat',
+            'Data admin created successfully',
             function () use ($data) {
                 if (!User::create($data)) {
                     $this->deleteImage($data['avatar']);
-                    throw new \Exception('Data admin gagal dibuat');
+                    throw new \Exception('Data admin failed to create');
                 }
             }
         );

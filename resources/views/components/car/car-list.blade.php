@@ -33,7 +33,7 @@
                     <a href="{{ route('cars.trash.show', $car->plat_number) }}"
                         class="btn btn-success btn-sm my-1">Detail</a>
                     <a href="{{ route('cars.restore', $car->plat_number) }}" class="btn btn-warning btn-sm my-1"
-                        onclick="return confirm('Yakin ingin mengembalikan data Car {{ $car->name }} ?')">Restore</a>
+                        onclick="return confirm('Yakin ingin mengembalikan Car Data {{ $car->name }} ?')">Restore</a>
                     @endif
                     <a href="#" class="btn btn-danger btn-sm" data-toggle="modal"
                         data-target="#deletecar{{ $car->plat_number }}modal">Hapus</a>
@@ -77,7 +77,7 @@
             <tr>
                 <td colspan="8">
                     <p class="font-weight-bold text-center text-monospace">
-                        Data Car {{ $type === 'trash' ? ' Delete ' : '' }} empty
+                        Car Data {{ $type === 'trash' ? ' Delete ' : '' }} empty
                     </p>
                 </td>
             </tr>

@@ -69,11 +69,11 @@ class CarController extends Controller
 
         return $this->checkProcess(
             self::ROUTE_INDEX,
-            'Data Car berhasil dibuat',
+            'Car Data created successfully',
             function () use ($data) {
                 if (!Car::create($data)) {
                     $this->deleteImage($data['image']);
-                    throw new \Exception('Data Car gagal dibuat');
+                    throw new \Exception('Car Data failed to create');
                 }
 
                 return ['status' => 'AVAILABLE'];
@@ -119,9 +119,9 @@ class CarController extends Controller
 
         return $this->checkProcess(
             self::ROUTE_INDEX,
-            'Data Car berhasil diubah',
+            'Car Data changed successfully',
             function () use ($car, $data) {
-                if (!$car->update($data)) throw new \Exception('Data Car gagal diubah');
+                if (!$car->update($data)) throw new \Exception('Car Data gagal diubah');
 
                 return ['status' => 'AVAILABLE'];
             }
@@ -136,11 +136,11 @@ class CarController extends Controller
      */
     public function destroy(Car $car)
     {
-        $failedMessage = "Data Car gagal dihapus";
+        $failedMessage = "Car Data gagal dihapus";
 
         return $this->checkProcess(
             self::ROUTE_INDEX,
-            'Data Car berhasil dihapus',
+            'Car Data berhasil dihapus',
             function () use ($car, $failedMessage) {
                 if (!$car->update(['deleted_by' => auth()->id()])) throw new \Exception($failedMessage);
                 if (!$car->delete()) throw new \Exception($failedMessage);
@@ -184,11 +184,11 @@ class CarController extends Controller
     public function restore(string $platNumber)
     {
         $car = $this->getOneDeletedCars($platNumber);
-        $failedMessage = 'Data Car gagal diReturnkan';
+        $failedMessage = 'Car Data gagal diReturnkan';
 
         return $this->checkProcess(
             self::ROUTE_TRASH,
-            'Data Car berhasil diReturnkan',
+            'Car Data berhasil diReturnkan',
             function () use ($car, $failedMessage) {
                 if (!$car->update(['deleted_by' => null])) throw new \Exception($failedMessage);
                 if (!$car->restore()) throw new \Exception($failedMessage);
@@ -212,12 +212,12 @@ class CarController extends Controller
 
         return $this->checkProcess(
             self::ROUTE_TRASH,
-            'Data Car berhasil dihapus secara permanen',
+            'Car Data berhasil dihapus secara permanen',
             function () use ($car, $image) {
                 if ($car->forceDelete()) {
                     $this->deleteImage($image);
                 } else {
-                    throw new \Exception('Data Car gagal dihapus secara permanen');
+                    throw new \Exception('Car Data gagal dihapus secara permanen');
                 }
 
                 return  null;

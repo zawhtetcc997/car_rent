@@ -76,7 +76,7 @@ class ProfileController extends Controller
 
         return $this->checkProcess(
             self::ROUTE_DASHBOARD,
-            'Password berhasil diubah',
+            'Password changed successfully',
             function () use ($data) {
                 if (!auth()->user()->update($data)) throw new \Exception('Password gagal diubah');
             }

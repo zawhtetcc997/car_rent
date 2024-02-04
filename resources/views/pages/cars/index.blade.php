@@ -12,7 +12,7 @@
         <a href="{{ route('cars.create') }}" class="btn btn-primary btn-block my-4">Add Car</a>
 
         @if (auth()->user()->name === 'Administrator')
-        <a href="{{ route('cars.trash') }}" class="btn btn-warning btn-block my-4">Data Car Delete</a>
+        <a href="{{ route('cars.trash') }}" class="btn btn-warning btn-block my-4">Car Data Delete</a>
         @endif
 
         <x-car.car-list :cars="$cars" type="index" />

@@ -68,11 +68,11 @@ class TransactionController extends Controller
     {
         $data = collect($this->mergeData($request->validated()))->except('cars')->toArray();
         $cars = collect($this->mergeData($request->validated()))->only('cars')->toArray()['cars'];
-        $failedMessage = 'Data Transaction gagal dibuat';
+        $failedMessage = 'Data Transaction failed to create';
 
         return $this->checkProcess(
             self::ROUTE_INDEX,
-            'Data Transaction berhasil dibuat',
+            'Data Transaction created successfully',
             function () use ($data, $cars, $failedMessage) {
                 if ($transaction = Transaction::create($data)) {
                     if (!$this->updateCarStatus($cars, 'NOT AVAILABLE')) throw new \Exception($failedMessage);
@@ -124,7 +124,7 @@ class TransactionController extends Controller
 
         return $this->checkProcess(
             self::ROUTE_INDEX,
-            'Data Transaction berhasil diubah',
+            'Data Transaction changed successfully',
             function () use ($validatedData, $transaction, $failedMessage) {
                 if ($transaction->update($this->mergeData($validatedData, false))) {
                     $carsId = $this->getCarsId($transaction->cars);
