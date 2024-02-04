@@ -1,16 +1,16 @@
 @extends('layouts.sb-admin-2.master')
 
-@section('title', 'Mingalar Buat Transaksi')
+@section('title', 'Mingalar Car Rental')
 
 @section('content')
-<h1>Buat Transaksi</h1>
+<h1>Make a Transaction</h1>
 
 <div class="row justify-content-center mb-5">
     <div class="col-md-8">
         <div class="card mt-3">
             <div class="row">
                 <div class="col-10">
-                    <h5 class="card-header">Form Buat Transaksi</h5>
+                    <h5 class="card-header">Form Make a Transaction</h5>
                 </div>
                 <div class="col-2">
                     <a href="{{ route('transactions.index') }}"
@@ -45,12 +45,12 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="start_date">Tanggal Sewa</label>
+                        <label for="start_date">Rental Date</label>
                         <div class="input-group flatpickr">
                             <input type="text" name="start_date"
                                 class="form-control @error('start_date') is-invalid @enderror" id="start_date"
                                 value="{{ old('start_date') }}"
-                                placeholder="{{ old('start_date') ?: 'Pilih tanggal sewa' }}" data-input>
+                                placeholder="{{ old('start_date') ?: 'Pilih Rental Date' }}" data-input>
                             <div class="input-group-append" id="button-addon4">
                                 <button class="btn btn-outline-secondary" type="button">
                                     <a class="input-button" title="toggle" data-toggle>
@@ -70,7 +70,7 @@
                         <input type="number" name="duration"
                             class="form-control @error('duration') is-invalid @enderror" id="duration"
                             value="{{ old('duration') }}">
-                        <small class="form-text text-muted">*Maksimal 30 hari</small>
+                        <small class="form-text text-muted">*Maximum 30 days</small>
                         @error('duration')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

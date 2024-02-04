@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     @include('pages.transactions.includes._bootstrap-4-styles')
-    <title>Nota Transaksi</title>
+    <title>Nota Transactions</title>
 </head>
 
 <body class="py-3">
-    <h1 class="text-center">NOTA TRANSAKSI</h1>
+    <h1 class="text-center">NOTA Transactions</h1>
     <h5 class="text-center">No. Invoice : {{ $transaction->invoice_number }}</h5>
 
     <div class="row justify-content-center mt-5">
@@ -35,7 +35,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row" class="text-left">Tanggal Sewa</th>
+                        <th scope="row" class="text-left">Rental Date</th>
                         <td class="pl-5">{{ $transaction->start_date_with_day }}</td>
                     </tr>
                     <tr>

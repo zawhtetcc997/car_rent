@@ -70,19 +70,19 @@
                 <div class="card-body">
                     <a href="{{ route('transactions.index', ['status' => '>']) }}"
                         class="text-decoration-none text-dark">
-                        <h4 class="small font-weight-bold mb-4">Transaksi BERJALAN
+                        <h4 class="small font-weight-bold mb-4">Transactions BERJALAN
                             <span class="float-right">{{ countOfTransactionStatus('>') }}</span>
                         </h4>
                     </a>
                     <a href="{{ route('transactions.index', ['status' => '<']) }}"
                         class="text-decoration-none text-dark">
-                        <h4 class="small font-weight-bold mb-4">Transaksi TERLAMBAT
+                        <h4 class="small font-weight-bold mb-4">Transactions TERLAMBAT
                             <span class="float-right">{{ countOfTransactionStatus('<') }}</span>
                         </h4>
                     </a>
                     <a href="{{ route('transactions.index', ['status' => 'COMPLETED']) }}"
                         class="text-decoration-none text-dark">
-                        <h4 class="small font-weight-bold mb-4">Transaksi SELESAI
+                        <h4 class="small font-weight-bold mb-4">Transactions SELESAI
                             <span class="float-right">{{ countOfTransactionStatus('COMPLETED') }}</span>
                         </h4>
                     </a>

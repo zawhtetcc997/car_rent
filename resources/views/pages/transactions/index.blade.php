@@ -11,7 +11,7 @@
 
         <x-transaction.transaction-search-bar :route="route('transactions.index')" />
 
-        <a href="{{ route('transactions.create') }}" class="btn btn-primary btn-block my-4">Buat Transaksi</a>
+        <a href="{{ route('transactions.create') }}" class="btn btn-primary btn-block my-4">Make a Transaction</a>
 
         {{-- @if (auth()->user()->name === 'Administrator')
         <a href="{{ route('cars.trash') }}" class="btn btn-warning btn-block my-4">Data Car Terhapus</a>

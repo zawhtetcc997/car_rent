@@ -3,7 +3,7 @@
 <script>
     $(document).ready(function() {
             $(".status-select2").select2({
-            placeholder: "Pilih status",
+            placeholder: "Select status",
             allowClear: true,
             // width: 'resolve',
             });

@@ -31,7 +31,7 @@
                         class="btn btn-secondary btn-sm my-1">Detail</a>
                     <a href="{{ route('transactions.restore', $transaction->invoice_number) }}"
                         class="btn btn-warning btn-sm my-1"
-                        onclick="return confirm('Yakin ingin mengembalikan data transaksi customer {{ $transaction->customer->name }} ?')">Restore</a>
+                        onclick="return confirm('Yakin ingin mengembalikan data Transactions customer {{ $transaction->customer->name }} ?')">Restore</a>
                     @endif
                     @can('delete', $transaction)
                     <a href="#" class="btn btn-danger btn-sm" data-toggle="modal"
@@ -53,7 +53,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">
-                                    Hapus transaksi {{ $type === 'trash' ? 'permanen' : '' }}
+                                    Hapus Transactions {{ $type === 'trash' ? 'permanen' : '' }}
                                 </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -61,7 +61,7 @@
                             </div>
                             <div class="modal-body">
                                 <p>
-                                    Apakah anda yakin ingin menghapus transaksi customer <strong>
+                                    Apakah anda yakin ingin menghapus Transactions customer <strong>
                                         {{ $transaction->customer->name }}</strong>
                                     {{ $type === 'trash' ? ' secara permanen' : '' }} ?
                                 </p>
@@ -84,7 +84,7 @@
             <tr>
                 <td colspan="8">
                     <p class="font-weight-bold text-center text-monospace">
-                        Data transaksi {{ $type === 'trash' ? ' terhapus ' : '' }} empty
+                        Data Transactions {{ $type === 'trash' ? ' terhapus ' : '' }} empty
                     </p>
                 </td>
             </tr>

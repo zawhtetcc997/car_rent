@@ -3,12 +3,12 @@
 <script>
     $(document).ready(function() {
             $(".customer-select2").select2({
-            placeholder: "Pilih customer",
+            placeholder: "Select customer",
             allowClear: true,
             });
 
             $(".cars-select2-multiple").select2({
-            placeholder: "Pilih Car",
+            placeholder: "Select Car",
             allowClear: true,
             });
         });

@@ -1,16 +1,16 @@
 @extends('layouts.sb-admin-2.master')
 
-@section('title', 'Mingalar Edit Transaksi')
+@section('title', 'Mingalar Edit Transactions')
 
 @section('content')
-<h1>Edit Transaksi</h1>
+<h1>Edit Transactions</h1>
 
 <div class="row justify-content-center mb-5">
     <div class="col-md-8">
         <div class="card mt-3">
             <div class="row">
                 <div class="col-10">
-                    <h5 class="card-header">Form Edit Transaksi</h5>
+                    <h5 class="card-header">Form Edit Transactions</h5>
                 </div>
                 <div class="col-2">
                     <a href="{{ route('transactions.index') }}"
@@ -51,7 +51,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="start_date">Tanggal Sewa</label>
+                        <label for="start_date">Rental Date</label>
                         <div class="input-group flatpickr">
                             <input type="text" name="start_date" class="form-control" id="start_date"
                                 value="{{ $transaction->start_date }}" placeholder="{{ $transaction->start_date }}"

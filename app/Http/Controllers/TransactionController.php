@@ -68,11 +68,11 @@ class TransactionController extends Controller
     {
         $data = collect($this->mergeData($request->validated()))->except('cars')->toArray();
         $cars = collect($this->mergeData($request->validated()))->only('cars')->toArray()['cars'];
-        $failedMessage = 'Data transaksi gagal dibuat';
+        $failedMessage = 'Data Transaction gagal dibuat';
 
         return $this->checkProcess(
             self::ROUTE_INDEX,
-            'Data transaksi berhasil dibuat',
+            'Data Transaction berhasil dibuat',
             function () use ($data, $cars, $failedMessage) {
                 if ($transaction = Transaction::create($data)) {
                     if (!$this->updateCarStatus($cars, 'NOT AVAILABLE')) throw new \Exception($failedMessage);
@@ -120,11 +120,11 @@ class TransactionController extends Controller
         $validatedData = [
             'payment_amount' => (int) str_replace('.', '', $request->validated()['payment_amount']) + $transaction->payment_amount
         ];
-        $failedMessage = 'Data transaksi gagal diubah';
+        $failedMessage = 'Data Transaction gagal diubah';
 
         return $this->checkProcess(
             self::ROUTE_INDEX,
-            'Data transaksi berhasil diubah',
+            'Data Transaction berhasil diubah',
             function () use ($validatedData, $transaction, $failedMessage) {
                 if ($transaction->update($this->mergeData($validatedData, false))) {
                     $carsId = $this->getCarsId($transaction->cars);
@@ -144,11 +144,11 @@ class TransactionController extends Controller
      */
     public function destroy(Transaction $transaction)
     {
-        $failedMessage = 'Data transaksi gagal dihapus';
+        $failedMessage = 'Data Transaction gagal dihapus';
 
         return $this->checkProcess(
             self::ROUTE_INDEX,
-            'Data transaksi berhasil dihapus',
+            'Data Transaction berhasil dihapus',
             function () use ($transaction, $failedMessage) {
                 if ($transaction->status === 'DP') {
                     $carsId = $this->getCarsId($transaction->cars);

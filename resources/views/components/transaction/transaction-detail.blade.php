@@ -12,7 +12,7 @@
                         @endforeach
                     </ul>
                     <p class="card-text">
-                        Tanggal Sewa : <span class="font-weight-bold">{{ $transaction->start_date_with_day }}</span>
+                        Rental Date : <span class="font-weight-bold">{{ $transaction->start_date_with_day }}</span>
                     </p>
                     <p class="card-text">
                         Tanggal Selesai : <span class="font-weight-bold">{{ $transaction->finish_date_with_day }}</span>
@@ -47,7 +47,7 @@
                             {{ currencyFormat($transaction->payment_amount) }}</span>
                     </p>
                     <p class="card-text">
-                        Status Transaksi:
+                        Status Transactions:
                         <span class="font-weight-bold font-italic {{ $transaction->transaction_status[0] }}">
                             {{ $transaction->transaction_status[1] }}
                         </span>
